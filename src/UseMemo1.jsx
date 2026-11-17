@@ -1,3 +1,13 @@
+// Definition of useMemo Hook
+// useMemo is a React Hook used to memorize (remember) the result of a calculation so that React does not need to calculate it again unnecessarily.
+
+// It helps improve application performance by avoiding unnecessary calculations.
+// 2. Syntax of useMemo
+// const memorizedValue = useMemo(() => {
+//     // Calculation
+//     return result;
+// }, [dependencies]);
+
 // Import useMemo and useState hooks from React
 import { useMemo, useState } from "react";
 
