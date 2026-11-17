@@ -1,15 +1,30 @@
-// Import the UseMemo1 component from the UseMemo1.jsx file
-import UseMemo1 from "./UseMemo1";
+// Import React library
+import React from 'react';
 
-// Declare a functional component named App
+// Import the Count component
+// Count displays the current count and provides buttons to change it
+import Count from './Count';
+
+// Import CountProvider from the providers folder
+// CountProvider shares count data with its child components
+import CountProvider from './providers/CountProvider';
+
+// Create a functional component named App
 function App() {
 
-    // Return the JSX that will be displayed in the browser
+    // Return the JSX to display in the browser
     return (
-        // Display the UseMemo1 component inside the App component
-        <UseMemo1 />
+
+        // Wrap Count inside CountProvider
+        // This allows Count to access the shared count data and functions
+        <CountProvider>
+
+            {/* Display the Count component */}
+            <Count />
+
+        </CountProvider>
     );
 }
 
-// Export the App component so it can be used in index.js
+// Export App so it can be imported into main.jsx
 export default App;
